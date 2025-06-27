@@ -13,6 +13,9 @@ type WorkExperience = {
   end: string
   link: string
   id: string
+  logo: string
+  missions: string[]
+  description: string
 }
 
 type BlogPost = {
@@ -29,97 +32,107 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Motion Primitives Pro',
+    name: 'ReachDem',
     description:
-      'Advanced components and templates to craft beautiful websites.',
+      'Powerful platform for sending messages. Helping businesses to communicate effectively with their customers.',
     link: 'https://pro.motion-primitives.com/',
     video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+      'https://res.cloudinary.com/dsg874b6x/video/upload/v1751025219/ReachDem-tour_nf70xo.mp4',
     id: 'project1',
   },
   {
-    name: 'Motion Primitives',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
+    name: 'Hublots',
+    description: 'Une plateforme de services a la personne. Le but est de mettre en relation les prestataires de services et les clients.',
+    link: 'https://lemon-sky-08fa4b50f.5.azurestaticapps.net/',
     video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+      'https://res.cloudinary.com/dsg874b6x/video/upload/v1751023912/Screen_Recording_2025-06-27_110348_omeiee.mp4',
     id: 'project2',
   },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'Reglazed Studio',
-    title: 'CEO',
-    start: '2024',
-    end: 'Present',
-    link: 'https://ibelick.com',
+    company: 'Global Maths Club',
+    title: 'Bénévole DevOps Engineer',
+    start: 'Nov 2023',
+    end: 'May 2025',
+    link: 'https://gmathsclub.com',
     id: 'work1',
+    logo: 'https://gmathsclub.com/logo-gmc.svg',
+    description: 'Organisation à but non lucratif dédiée à la promotion des mathématiques et de l\'informatique auprès des jeunes.',
+    missions: [
+      'Mise en place et maintenance de l\'infrastructure cloud (AWS/Azure)',
+      'Automatisation des processus de déploiement avec CI/CD',
+      'Devellopement de la plateforme web et du CRM',
+      'Formation des équipes aux bonnes pratiques DevOps',
+      'Optimisation des performances et monitoring des applications'
+    ]
   },
   {
-    company: 'Freelance',
-    title: 'Design Engineer',
-    start: '2022',
-    end: '2024',
-    link: 'https://ibelick.com',
-    id: 'work2',
-  },
-  {
-    company: 'Freelance',
-    title: 'Front-end Developer',
-    start: '2017',
-    end: 'Present',
-    link: 'https://ibelick.com',
+    company: 'Hublots',
+    title: 'CTO & Co-Founder',
+    start: '2024',
+    end: '2025',
+    link: 'https://lemon-sky-08fa4b50f.5.azurestaticapps.net/',
     id: 'work3',
+    logo: 'https://lemon-sky-08fa4b50f.5.azurestaticapps.net/logo.svg',
+    description: 'Plateforme de services à la personne connectant prestataires et clients pour diverses prestations du quotidien.',
+    missions: [
+      'Direction technique et stratégie technologique de l\'entreprise',
+      'Architecture et développement de la plateforme web (React, Node.js)',
+      'Gestion d\'équipe technique et recrutement développeurs',
+      'Mise en place des processus qualité et sécurité',
+      'Interface avec les investisseurs et présentation de la roadmap technique',
+      'Développement de l\'API et intégration des services tiers'
+    ]
+  },
+  {
+    company: 'Freelance',
+    title: 'Web Designer & Software Engineer',
+    start: '2022',
+    end: 'Present',
+    link: 'https://latioms.co',
+    id: 'work2',
+    logo: 'https://latioms.co/favicon.ico',
+    description: 'Services de développement web et design pour clients variés, de la startup à l\'entreprise établie.',
+    missions: [
+      'Développement d\'applications web modernes (React, Next.js, TypeScript)',
+      'Conception UX/UI et prototypage d\'interfaces utilisateur',
+      'Développement d\'APIs REST et GraphQL (Node.js, Python)',
+      'Intégration de solutions e-commerce et systèmes de paiement',
+      'Consulting technique et audit de performance',
+      'Formation et accompagnement des équipes clientes',
+      'Maintenance et évolution d\'applications existantes'
+    ]
   },
 ]
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
-    description: 'How AI is changing the way we design',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-1',
-  },
-  {
-    title: 'Why I left my job to start my own company',
-    description:
-      'A deep dive into my decision to leave my job and start my own company',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-2',
-  },
-  {
-    title: 'What I learned from my first year of freelancing',
-    description:
-      'A look back at my first year of freelancing and what I learned',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-3',
-  },
-  {
-    title: 'How to Export Metadata from MDX for Next.js SEO',
-    description: 'A guide on exporting metadata from MDX files to leverage Next.js SEO features.',
-    link: '/blog/example-mdx-metadata',
-    uid: 'blog-4',
+    title: 'Coming Soon...',
+    description: 'Exciting content is on the way! Stay tuned for insights on tech, development, and more.',
+    link: '#',
+    uid: 'blog-coming-soon',
   },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Github',
-    link: 'https://github.com/ibelick',
+    link: 'https://github.com/latioms',
   },
   {
     label: 'Twitter',
-    link: 'https://twitter.com/ibelick',
+    link: 'https://twitter.com/lbelrick',
   },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ibelick',
+    link: 'https://www.linkedin.com/in/belrick-stephane',
   },
   {
     label: 'Instagram',
-    link: 'https://www.instagram.com/ibelick',
+    link: 'https://www.instagram.com/latiomsan',
   },
 ]
 
-export const EMAIL = 'your@email.com'
+export const EMAIL = 'belrick@latioms.co'
