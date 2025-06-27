@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     default: 'LATIOMS - Personal website.',
     template: '%s | Latioms',
   },
-  description:  'Latioms is a personal website showcasing my projects, skills, and experiences. Explore my work in web development, design, and more.',
+  description:  'This is a personal website showcasing my projects, skills, and experiences. Explore my work in web development, design, and more.',
 };
 
 const geist = Geist({
