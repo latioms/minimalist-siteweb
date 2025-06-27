@@ -30,6 +30,16 @@ type SocialLink = {
   link: string
 }
 
+type ClientWebsite = {
+  name: string
+  client: string
+  description: string
+  link: string
+  image: string
+  year: string
+  id: string
+}
+
 export const PROJECTS: Project[] = [
   {
     name: 'ReachDem',
@@ -104,6 +114,45 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
       'Formation et accompagnement des équipes clientes',
       'Maintenance et évolution d\'applications existantes'
     ]
+  },
+]
+
+export const CLIENT_WEBSITES: ClientWebsite[] = [
+  {
+    name: 'Bantu Vibes',
+    client: 'Bantu Vibes',
+    description: 'Site web pour restaurant de cuisine africaine authentique à Houston, spécialisé dans la cuisine nigériane et camerounaise avec système de réservation en ligne.',
+    link: 'https://bantuvibes.restaurant',
+    image: '/bantuvibes.png',
+    year: '2024',
+    id: 'client-1'
+  },
+  {
+    name: 'LoweJo Shop',
+    client: 'LoweJo',
+    description: 'Boutique e-commerce de luxe spécialisée dans les chaussures italiennes, maroquinerie et parfums haut de gamme avec collections curées.',
+    link: 'https://lowejo.com',
+    image: '/lowejo-shop.png',
+    year: '2024',
+    id: 'client-2'
+  },
+  {
+    name: 'Makala Mboa e.V.',
+    client: 'Makala Mboa e.V.',
+    description: 'Site web pour association culturelle africaine en Allemagne promouvant l\'inclusion digitale pour les personnes autistes et organisant des événements culturels.',
+    link: 'https://makala.mboa-ev.de',
+    image: '/makala.png',
+    year: '2024',
+    id: 'client-3'
+  },
+  {
+    name: 'LN-FOOT',
+    client: 'LN-FOOT | LN-Shop',
+    description: 'CRM pou une agence de magasin sportive dediee au football.',
+    link: 'https://ln-foot.',
+    image: '/luvnation.png',
+    year: '2025',
+    id: 'client-3'
   },
 ]
 

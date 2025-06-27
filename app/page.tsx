@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'motion/react'
-import { XIcon } from 'lucide-react'
+import { ExternalLinkIcon, XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
 import {
@@ -12,12 +12,14 @@ import {
 } from '@/components/ui/morphing-dialog'
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
+import { Carousel } from '@/components/ui/carousel'
 import {
   PROJECTS,
   WORK_EXPERIENCE,
   BLOG_POSTS,
   EMAIL,
   SOCIAL_LINKS,
+  CLIENT_WEBSITES,
 } from './data'
 
 const VARIANTS_CONTAINER = {
@@ -317,6 +319,80 @@ export default function Personal() {
             </MorphingDialog>
           ))}
         </div>
+      </motion.section>
+
+
+            <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium">Some Client Projects</h3>
+        <Carousel 
+          autoPlay={true}
+          autoPlayInterval={4000}
+          showDots={true}
+          showArrows={true}
+          className="w-full"
+        >
+          {CLIENT_WEBSITES.map((website) => (
+            <div key={website.id} className="w-full">
+              <div className="mx-auto max-w-4xl">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-center">
+                  {/* Image */}
+                  <div className="group relative overflow-hidden rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                      <img
+                        src={website.image}
+                        alt={`${website.name} preview`}
+                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="space-y-2 ">
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <a
+                          className="font-base group relative inline-block text-2xl font-[450] text-zinc-900 dark:text-zinc-50"
+                          href={website.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {website.name}
+                          <span className="absolute left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
+                        </a>
+                        <p className="text-lg text-zinc-500 dark:text-zinc-500 ">
+                          {website.client}
+                        </p>
+                      </div>
+                      <span className=" text-zinc-400 dark:text-zinc-600">
+                        {website.year}
+                      </span>
+                    </div>
+
+                    <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                      {website.description}
+                    </p>
+
+                    <div className="pt-2">
+                      <a
+                        href={website.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
+                      >
+                        Voir le projet
+                        <ExternalLinkIcon className="h-3 w-3" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Carousel>
       </motion.section>
 
       <motion.section
